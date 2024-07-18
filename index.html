@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Frontend Bilinmesi Gerekenker</h1>
+    </header>
+    <section id="frontend">
+      <h2>Yol Haritası</h2>
+      <!-- vue js ile interpolition kullanarak datayı p etiketinin içerisine yazdık -->
+      <p>{{firstGoal}}</p>
+      <!-- v-bind metodu ile attributedlere vue ile ulaşma yolu -->
+      <a v-bind:href="website">Google</a>
+      <!-- Fonksyison çağırma -->
+      <p>{{outputGoal()}}</p>
+      <!-- eğer data içerisinde html kodu var ise bunu v-html="..." diyerek çağırıyoruz -->
+      <p v-html="htmlData"></p>
+    </section>
+    <script src="script.js" defer></script>
+  </body>
+</html>
